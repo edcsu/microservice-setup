@@ -25,6 +25,9 @@ public class Order {
     @JsonProperty("shopping_cart_id")
     private Long ShoppingCartId;
 
+    @JsonProperty("customer_id")
+    private Long customerId;
+
     @JsonFormat(pattern = "dd/MM/yyyy") private LocalDate dateCreated;
 
     private String status;
