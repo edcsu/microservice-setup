@@ -5,11 +5,15 @@ This API allows you to manage various aspects of an online store, including prod
 
 ## Table of Contents
 
+- [High-level architecture of the microservices](#High-level architecture of the microservices)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Endpoints](#endpoints)
+
+## High-level architecture of the microservices
+![High-level architecture of the microservices](./microservice-setup.png "High-level architecture of the microservices")
 
 ## Getting Started
 
@@ -20,7 +24,7 @@ These instructions will help you set up and run the eCommerce API on your local 
 - [Java Development Kit (JDK) 17](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html)
 - [Apache Maven](https://maven.apache.org/download.cgi)
 
-*It is better to use [Jetbrains community](https://www.jetbrains.com/idea/download/)*
+*It is better to use [Jetbrains community edition](https://www.jetbrains.com/idea/download/)* to handle this setup
 
 ## Installation
 
