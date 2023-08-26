@@ -9,13 +9,15 @@ import com.ske.skeecommerce.service.OrderProductService;
 import com.ske.skeecommerce.service.OrderService;
 import com.ske.skeecommerce.service.ProductService;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 
+@Tag(name = "Orders", description = "The Orders Api")
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
@@ -39,7 +42,7 @@ public class OrderController {
         this.orderProductService = orderProductService;
     }
 
-    @PostMapping( produces = "application/json")
+    @PostMapping( path = "/request", produces = "application/json")
     public ResponseEntity<Order> create(@RequestBody OrderForm form) {
         List<OrderProductDto> formDtos = form.getProductOrders();
         validateProductsExistence(formDtos);
