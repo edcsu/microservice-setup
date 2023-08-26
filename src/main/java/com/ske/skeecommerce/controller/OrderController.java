@@ -45,7 +45,7 @@ public class OrderController {
     public @NotNull Iterable<Order> list() {
         return this.orderService.getAllOrders();
     }
-    
+
     @PostMapping( path = "/request", produces = "application/json")
     public ResponseEntity<Order> create(@RequestBody OrderForm form) {
         List<OrderProductDto> formDtos = form.getProductOrders();
