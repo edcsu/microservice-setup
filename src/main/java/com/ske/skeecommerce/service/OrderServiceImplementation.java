@@ -30,6 +30,11 @@ public class OrderServiceImplementation implements OrderService {
     }
 
     @Override
+    public void delete(Order order) {
+        this.orderRepository.delete(order);
+    }
+
+    @Override
     public void update(Order order) {
         this.orderRepository.save(order);
     }
