@@ -1,5 +1,6 @@
 package com.ske.skeecommerce.service;
 
+import com.ske.skeecommerce.exception.ResourceNotFoundException;
 import com.ske.skeecommerce.model.Product;
 import com.ske.skeecommerce.repository.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,7 @@ public class ProductServiceImplementation implements ProductService {
     public Product getProduct(long id) {
         return productRepository
                 .findById(id)
-                .orElse( null);
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
     }
 
 
