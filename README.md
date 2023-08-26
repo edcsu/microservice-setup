@@ -17,8 +17,10 @@ These instructions will help you set up and run the eCommerce API on your local 
 
 ## Prerequisites
 
-- Java Development Kit (JDK) 17
-- Apache Maven
+- [Java Development Kit (JDK) 17](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html)
+- [Apache Maven](https://maven.apache.org/download.cgi)
+
+*It is better to use [Jetbrains community](https://www.jetbrains.com/idea/download/)*
 
 ## Installation
 
